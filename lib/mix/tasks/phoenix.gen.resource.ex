@@ -70,6 +70,7 @@ defmodule Mix.Tasks.Phoenix.Gen.Resource do
       {:eex, "new.html.eex",   "web/templates/#{path}/new.html.eex"},
       {:eex, "show.html.eex",  "web/templates/#{path}/show.html.eex"},
       {:eex, "view.ex",        "web/views/#{path}_view.ex"},
+      {:eex, "test.ex",        "test/models/#{path}_test.exs"},
     ]
 
     Mix.shell.info """

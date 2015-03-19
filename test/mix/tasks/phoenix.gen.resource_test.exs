@@ -43,6 +43,13 @@ defmodule Mix.Tasks.Phoenix.Gen.ResourceTest do
         assert file =~ "~w(name age nicks famous born_at secret)"
       end
 
+      assert_file "test/models/user_test.exs", fn file ->
+        assert file =~ "defmodule Phoenix.UserTest do"
+        assert file =~ "use ExUnit.Case"
+        assert file =~ "test \"the truth\" do"
+        assert file =~ "assert 1 + 1 == 2"
+      end
+
       assert_file "web/views/user_view.ex", fn file ->
         assert file =~ "defmodule Phoenix.UserView do"
         assert file =~ "use Phoenix.Web, :view"
